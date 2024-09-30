@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="asserts/favicon.png">
+    <title>Tic-Tac-Toe || By Anup</title>
+    <script src="https://kit.fontawesome.com/3e4dddc1db.js" crossorigin="anonymous"></script>
+    <audio id="win">
+        <source src="asserts/yay.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="tie">
+        <source src="asserts/Draw.mp3" type="audio/mpeg">
+    </audio>
+</head>
+
+<body>
+    <div class="root">
+        <h1 class="title">Tic Tac Toe</h1>
+        <div class="playground">
+            <button class="box" id="box1" onclick="box(1)" aria-label="cell 1"></button>
+            <button class="box" id="box2" onclick="box(2)" aria-label="cell 2"></button>
+            <button class="box" id="box3" onclick="box(3)" aria-label="cell 3"></button>
+            <button class="box" id="box4" onclick="box(4)" aria-label="cell 4"></button>
+            <button class="box" id="box5" onclick="box(5)" aria-label="cell 5"></button>
+            <button class="box" id="box6" onclick="box(6)" aria-label="cell 6"></button>
+            <button class="box" id="box7" onclick="box(7)" aria-label="cell 7"></button>
+            <button class="box" id="box8" onclick="box(8)" aria-label="cell 8"></button>
+            <button class="box" id="box9" onclick="box(9)" aria-label="cell 9"></button>
+        </div>
+
+        <div class="clicks">
+            <button class="buttons" id="start" onclick="undoMove()">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>Undo</h3>
+            </button>
+            <button class="buttons" id="reset" onclick="resetGame()">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <h3>Reset</h3>
+            </button>
+            <button class="buttons" id="toggleMute" onclick="toggleMute()">
+                <i class="fa-solid fa-volume-xmark"></i>
+                <h3>Mute</h3>
+            </button>
+        </div>
+    </div>
+
+    <h1 id="result">1st Player Turn</h1>
+    <div class="container">
+        <button type="button" class="btn" onclick="openPopup()">Rules</button>
+    </div>
+    <!-- New Popup for Game Result -->
+    <div id="gameResultPopup" class="result-popup">
+        <h2 id="gameResultText"></h2>
+    </div>
+    
+    <div class="popup" id="popup">
+        <h2>Rules:</h2>
+        <ol>
+            <li>The game is played on a 3x3 grid.</li>
+            <li>
+                Players take turns. Player 1 uses "X" and Player 2 uses "O".
+                Click on an empty square to place your mark.
+            </li>
+            <li>
+                The first player to align three of their marks in a row (horizontally, vertically, or diagonally) wins
+                the game.
+            </li>
+            <li>
+                If all 9 squares are filled and no player has three marks in a row, the game ends in a tie.
+            </li>
+            <li>
+                You can reset the game at any time by clicking the "Reset" button.
+            </li>
+        </ol>
+        <button type="button" id="ok" onclick="closePopup()">OK</button>
+    </div>
+
+    <div class="myinfo">
+        <p class="author">By Anup_Bhar</p>
+        <div class="social-links-container">
+            <ul class="social-links">
+                <li class="hov">
+                    <a href="https://github.com/anupbhar341" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li class="hov">
+                    <a href="https://www.linkedin.com/in/bhar-anup/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="hov">
+                    <a href="https://www.instagram.com/_anupbhar.341_/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
