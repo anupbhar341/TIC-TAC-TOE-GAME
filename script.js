@@ -160,7 +160,7 @@ function closePopup() {
 
 function playClickSound() {
     if (!isMuted) {
-        let clickSound = new Audio('asserts/click.mp3');
+        let clickSound = new Audio('click.mp3');
         clickSound.play();
     }
 }
